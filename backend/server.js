@@ -11,6 +11,19 @@ const API_PREFIX = `${BASE_PATH || ''}/api`;
 app.use(express.json());
 // Serve frontend under the configured base path
 app.use(STATIC_MOUNT, express.static(path.join(__dirname, '../frontend')));
+// Allow cross-origin requests from your Hostinger site to Render
+try {
+  const cors = require('cors');
+  app.use(cors({
+    origin: [
+      'https://waleedalim.com',
+      'https://www.waleedalim.com'
+    ],
+    methods: ['GET','POST','PUT','DELETE'],
+  }));
+} catch (e) {
+  // If cors isn't installed locally, ignore; Render should have it installed.
+}
 
 const products = [
   { id: 1, name: 'Wireless Headphones', price: 189.99, description: 'premium sound quality', image: `${BASE_PATH || ''}/images/headphone.webp` },

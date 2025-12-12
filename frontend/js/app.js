@@ -1,4 +1,4 @@
-const API = '/api';
+const API = '/it202-final-project/api';
 
 function getCartCount() {
   fetch(`${API}/cart`).then(r => r.json()).then(data => {

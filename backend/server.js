@@ -5,7 +5,6 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../frontend')));
 
-// Products data
 const products = [
   { id: 1, name: 'Wireless Headphones', price: 189.99, description: 'Premium sound quality', image: '/images/headphone.webp' },
   { id: 2, name: 'USB-C Cable', price: 19.99, description: 'Fast charging cable', image: '/images/cable.jpg' },
@@ -22,7 +21,6 @@ let cart = [];
 let orders = [];
 let orderId = 1000;
 
-// Routes
 app.get('/api/products', (req, res) => res.json(products));
 
 app.get('/api/cart', (req, res) => res.json(cart));
@@ -55,4 +53,5 @@ app.post('/api/orders/create', (req, res) => {
   res.json(order);
 });
 
-app.listen(5000, () => console.log('Server on http://localhost:5000'));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

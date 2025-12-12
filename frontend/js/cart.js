@@ -4,7 +4,7 @@ function loadCart() {
   fetch(`${API}/cart`).then(r => r.json()).then(cart => {
     const container = document.getElementById('cart-items-container');
     if (cart.length === 0) {
-      container.innerHTML = '<p>Cart is empty</p><a class="btn btn-primary mt-2" href="/it202-final-project/index.html">Back to products</a>';
+      container.innerHTML = `<p>Cart is empty</p><a class="btn btn-primary mt-2" href="${BASE_PATH}/index.html">Back to products</a>`;
       document.getElementById('total').textContent = formatPrice(0);
       document.getElementById('checkout-btn').disabled = true;
       getCartCount();
@@ -59,7 +59,7 @@ function removeFromCart(id) {
 function goToCheckout() {
   fetch(`${API}/cart`).then(r => r.json()).then(cart => {
     if (!cart || cart.length === 0) return alert('Cart is empty. Add items first.');
-    window.location.href = 'checkout.html';
+    window.location.href = `${BASE_PATH}/pages/checkout.html`;
   });
 }
 

@@ -6,15 +6,15 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../frontend')));
 
 const products = [
-  { id: 1, name: 'Wireless Headphones', price: 189.99, description: 'Premium sound quality', image: '/images/headphone.webp' },
-  { id: 2, name: 'USB-C Cable', price: 19.99, description: 'Fast charging cable', image: '/images/cable.jpg' },
-  { id: 3, name: 'Phone Stand', price: 29.99, description: 'Adjustable stand', image: '/images/stands.jpg' },
-  { id: 4, name: 'Portable Speaker', price: 79.99, description: 'Bluetooth speaker', image: '/images/speaker.avif' },
-  { id: 5, name: 'Screen Protector', price: 9.99, description: 'Tempered glass', image: '/images/screenprotector.webp' },
-  { id: 6, name: 'Phone Case', price: 24.99, description: 'Protective case', image: '/images/case.jpg' },
-  { id: 7, name: 'Wireless Charger', price: 39.99, description: 'Fast charging', image: '/images/charger.webp' },
-  { id: 8, name: 'Computer Mouse', price: 49.99, description: 'Ergonomic design', image: '/images/mouse.avif' },
-  { id: 9, name: 'Watch', price: 199.99, description: 'Smart watch', image: '/images/watch.webp' }
+  { id: 1, name: 'Wireless Headphones', price: 189.99, description: 'premium sound quality', image: '/images/headphone.webp' },
+  { id: 2, name: 'USB-C Cable', price: 19.99, description: 'a fast charging cable', image: '/images/cable.jpg' },
+  { id: 3, name: 'Phone Stand', price: 29.99, description: 'adjustable stand', image: '/images/stands.jpg' },
+  { id: 4, name: 'Portable Speaker', price: 79.99, description: 'bluetooth speaker', image: '/images/speaker.avif' },
+  { id: 5, name: 'Screen Protector', price: 9.99, description: 'tempered glass', image: '/images/screenprotector.webp' },
+  { id: 6, name: 'Phone Case', price: 24.99, description: 'protective case', image: '/images/case.jpg' },
+  { id: 7, name: 'Wireless Charger', price: 39.99, description: 'very fast charging', image: '/images/charger.webp' },
+  { id: 8, name: 'Computer Mouse', price: 49.99, description: 'good design', image: '/images/mouse.avif' },
+  { id: 9, name: 'Watch', price: 199.99, description: 'smart watch', image: '/images/watch.webp' }
 ];
 
 let cart = [];
